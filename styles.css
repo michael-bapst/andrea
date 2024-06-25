@@ -55,13 +55,13 @@ body {
 }
 
 .text {
-    color: black; /* Textfarbe auf schwarz geändert */
+    color: black;
     font-size: 1.2rem;
     text-align: center;
     padding: 8px 12px;
     white-space: pre-wrap;
     box-sizing: border-box;
-    background-color: white; /* Hintergrundfarbe auf weiß geändert */
+    background-color: white;
     margin-top: -4px;
 }
 

@@ -1,7 +1,7 @@
 let slideIndex = 0;
 let audioStarted = false;
 let firstPass = true;
-const typeSpeed = 100; // Schreibgeschwindigkeit in Millisekunden
+const typeSpeed = 120;
 
 function showSlides() {
     let i;
@@ -12,17 +12,17 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {
         slideIndex = 1;
-        firstPass = false; // Beim zweiten Durchlauf wird firstPass auf false gesetzt
+        firstPass = false;
     }
     slides[slideIndex - 1].style.display = "block";
     const textElement = slides[slideIndex - 1].getElementsByClassName("text")[0];
     if (firstPass) {
         typeWriter(textElement, () => {
-            setTimeout(showSlides, 2000); // 2 Sekunden zusätzlich warten
+            setTimeout(showSlides, 2000);
         });
     } else {
         textElement.innerHTML = textElement.getAttribute("data-text");
-        setTimeout(showSlides, 5000); // Beim zweiten Durchlauf 5 Sekunden pro Folie
+        setTimeout(showSlides, 5000);
     }
 }
 
@@ -47,7 +47,7 @@ function showSlidesManual(n) {
     const textElement = slides[slideIndex - 1].getElementsByClassName("text")[0];
     if (firstPass) {
         typeWriter(textElement, () => {
-            setTimeout(() => {}, 2000); // 2 Sekunden zusätzlich warten
+            setTimeout(() => {}, 1000);
         });
     } else {
         textElement.innerHTML = textElement.getAttribute("data-text");
@@ -62,9 +62,9 @@ function typeWriter(element, callback) {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
             i++;
-            setTimeout(type, typeSpeed); // Geschwindigkeit der Schreibmaschinenanimation
+            setTimeout(type, typeSpeed);
         } else if (callback) {
-            setTimeout(callback, 1000) // 2 Sekunden zusätzlich warten
+            setTimeout(callback, 1000)
         }
     }
     type();
