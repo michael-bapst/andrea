@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geburtstag ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="image-container">
+      <img src="images/bild1.jpg" class="slide-img" alt="Bild 1">
+    </div>
+    <div class="text" data-text="Hallo mis süesse schätzeli. Ig wünsche dir aues guete zum Geburtstag. ig hoffe aui dini Wünsch und Tröim gö i erfüllig, und was du dir aues no wünschisch i Zuekunft. Gniess di tag :) ig freue mi riesig uf später :) ig ha euch beidi so wahnsinnig gärn :)"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="image-container">
+      <img src="images/bild2.jpg" class="slide-img" alt="Bild 2">
+    </div>
+    <div class="text" data-text="Liebe dini art so wie du redsch, Liebe dini art wie du lachsch, Liebe dini stimm, packä dis härz i mi safe und bewares winä schatz. Dini ouge zieh mi immer wieder ine bann und lö mi nümme los. Wenn du näbe mir erwachsch, hoffi das du nie meh geisch, und für immer bi mir bisch :)"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="image-container">
+      <img src="images/bild4.jpg" class="slide-img" alt="Bild 4">
+    </div>
+    <div class="text" data-text="Du bisch wie mi Takt, mini Symphonie, du bisch mini Musig mini Melodie :) dini wermi git mir kraft, die liebi git mir haut, dini schönheit nimmt mir mi verstang :) ig wünscht ig chönt d zit stoppe wen bi mir bisch :) dis lache isch wie Sunnestrahle für mini sehlä :)"></div>
+  </div>
+  <div class="mySlides fade">
+    <div class="image-container">
+      <img src="images/bild3.jpg" class="slide-img" alt="Bild 3">
+    </div>
+    <div class="text" data-text="Ig hoffe dasi immer so a dire site darf si :) Ig Liebe di so ungloublech :) schön dasi e Teil vo dim läbe darf si, und ig das riesige Glück ha gha sone wahnsiins Frou ha dörfe kennelehrä :) du bisch äs riesigs Gschänk i mim läbe:) schön dases di git :)"></div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Hintergrundmusik -->
+<audio id="background-audio" preload="auto" loop>
+  <source src="images/Chayanne%20-%20Bailando%20Bachata%20(Letra).mp3" type="audio/mpeg">
+  Ihr Browser unterstützt das Audioelement nicht.
+</audio>
+
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const audio = document.getElementById("background-audio");
+    audio.play().catch(error => {
+      console.error("Audio playback failed:", error);
+    });
+    showSlides();
+  });
+</script>
+</body>
+</html>
